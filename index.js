@@ -1,8 +1,10 @@
 const express = require("express");
 const app = express();
 const importdata = require("./data.json");
+const cors = require('cors');
 let port = process.env.PORT || 3000;
 
+app.use(cors());
 app.get("/",(req,res)=>{
     res.send("GALAT 404");
 });
